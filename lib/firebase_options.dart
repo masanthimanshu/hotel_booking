@@ -50,20 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB0DgzS-YTe0sSNf5aoWc7TQcNlH6TO3Rc',
-    appId: '1:412639414756:android:8bf8cca4abd1a65a5f5ff1',
-    messagingSenderId: '412639414756',
-    projectId: 'coupon-smart',
-    storageBucket: 'coupon-smart.appspot.com',
+    apiKey: 'AIzaSyAM9OmRBs7BLx5RVOGNgSbf35VoD1hmCgs',
+    appId: '1:50511991901:android:784b9344bbe588d75369b4',
+    messagingSenderId: '50511991901',
+    projectId: 'hotel-booking-7bd8f',
+    storageBucket: 'hotel-booking-7bd8f.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBOKDPAIi_j25XeVMLV9lnJs5WPzmCafuU',
-    appId: '1:412639414756:ios:bddaf141509efae75f5ff1',
-    messagingSenderId: '412639414756',
-    projectId: 'coupon-smart',
-    storageBucket: 'coupon-smart.appspot.com',
-    iosClientId: '412639414756-a84aq6ns91pm838atl28de38socabg9g.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDeTVOWGMmqbZIs4ukcEI5NPtk1N96pqdQ',
+    appId: '1:50511991901:ios:fc6cd44d2573ae295369b4',
+    messagingSenderId: '50511991901',
+    projectId: 'hotel-booking-7bd8f',
+    storageBucket: 'hotel-booking-7bd8f.appspot.com',
     iosBundleId: 'com.example.hotelBooking',
   );
 }

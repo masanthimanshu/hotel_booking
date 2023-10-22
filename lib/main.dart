@@ -5,7 +5,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hotel_booking/firebase_options.dart';
 import 'package:hotel_booking/utils/root.dart';
 import 'package:hotel_booking/utils/theme.dart';
-import 'package:loader_overlay/loader_overlay.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,14 +29,10 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
 
-    return GlobalLoaderOverlay(
-      overlayOpacity: 0.8,
-      useDefaultLoading: false,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: const RootElement(),
-        theme: themeData,
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const RootElement(),
+      theme: themeData,
     );
   }
 }

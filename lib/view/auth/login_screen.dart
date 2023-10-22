@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:hotel_booking/services/phone_auth_service.dart';
 import 'package:hotel_booking/view/auth/otp_bottom_sheet.dart';
-import 'package:loader_overlay/loader_overlay.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -20,19 +19,15 @@ class _LoginScreenState extends State<LoginScreen> {
   String _name = "";
 
   void _handlePhoneNumber() {
-    context.loaderOverlay.show();
-
     if (_name.trim() == "") {
       Fluttertoast.showToast(msg: "Enter Your Name");
-      context.loaderOverlay.hide();
       return;
     }
 
     if (_numberPattern.hasMatch(_phone)) {
       PhoneAuthService().sendOtp("$_countryCode $_phone").then((value) {
-        otpBottomSheet(
+        OtpScreen(context: context).otpBottomSheet(
           countryCode: _countryCode,
-          context: context,
           verId: value!,
           phone: _phone,
           name: _name,
